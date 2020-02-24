@@ -1,0 +1,18 @@
+Script started on Sun 17 Nov 2019 06:33:05 PM EST
+mikehj24@pe07:~/cs630/jdbc$ exit^H^H^H^Hjava -classpath ojdbc6.jar:. JdbcCheckup
+Please enter information to test connection to the database
+Using Oracle (o), MySql (m) or H2 (h)? o
+user: mikehj24
+password: mikehj24
+host: dbs3.cs.umb.edu
+port (often 1521): 1521
+sid (site id): dbs3
+using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...connected.
+Hello World!
+Your JDBC installation is correct.
+mikehj24@pe07:~/cs630/jdbc$ exit
+exit
+
+Script done on Sun 17 Nov 2019 06:33:55 PM EST
+

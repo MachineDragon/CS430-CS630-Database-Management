@@ -1,0 +1,82 @@
+mikehj24@topcat:~/cs630/HW4$ sqlplus mikehj24/mikehj24@//dbs3.cs.umb.edu/dbs3
+
+SQL*Plus: Release 12.1.0.2.0 Production on Wed Nov 20 20:58:46 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Wed Nov 20 2019 20:52:24 -05:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+SQL> @query3-oracle.sql
+SQL> SELECT b.name, b.stars, b.review_count
+  2  FROM yelp_db.business b, yelp_db.category c
+  3  WHERE b.id = c.business_id AND b.city = 'Las Vegas' AND b.state = 'NV' AND c.category = 'Restaurants'
+  4  AND 200 > sdo_geom.sdo_distance (
+  5     sdo_geometry (2001, 4326, null, sdo_elem_info_array(1, 1, 1),
+  6       sdo_ordinate_array(
+  7         (SELECT a.longitude FROM yelp_db.apartments a WHERE a.listing = 120),
+  8         (SELECT a.latitude FROM yelp_db.apartments a WHERE a.listing = 120)
+  9      )),
+ 10     sdo_geometry (2001,4326, null, sdo_elem_info_array(1, 1, 1),
+ 11       sdo_ordinate_array(
+ 12         b.longitude, b.latitude  )), 1, 'unit=M')
+ 13   GROUP BY b.id, b.name, b.stars, b.review_count
+ 14   HAVING b.review_count >= 10;
+
+NAME
+--------------------------------------------------------------------------------
+     STARS REVIEW_COUNT
+---------- ------------
+Arby's
+  2.5E+000           35
+
+Rachel's Kitchen
+  3.5E+000          252
+
+Port of Subs
+  3.0E+000           34
+
+
+NAME
+--------------------------------------------------------------------------------
+     STARS REVIEW_COUNT
+---------- ------------
+El Pollo Loco
+  2.5E+000           62
+
+China One
+  3.5E+000          200
+
+Babystacks Cafe
+  4.0E+000          437
+
+
+NAME
+--------------------------------------------------------------------------------
+     STARS REVIEW_COUNT
+---------- ------------
+Timbers - Durango
+  2.5E+000           90
+
+Market Grille Cafe
+  4.0E+000          428
+
+LULU Hawaiian BBQ 2
+  3.5E+000           56
+
+
+NAME
+--------------------------------------------------------------------------------
+     STARS REVIEW_COUNT
+---------- ------------
+Popeyes Louisiana Kitchen
+  2.0E+000           88
+
+
+10 rows selected.
+
+SQL>
+SQL>

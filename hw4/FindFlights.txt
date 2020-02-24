@@ -1,0 +1,58 @@
+mikehj24@pe07:~/cs630/hw4$ java -classpath ojdbc6.jar:. FindFlights
+Picked up _JAVA_OPTIONS: -Djava.security.egd=file:/dev/../dev/urandom
+Please enter information to test connection to the database
+Using Oracle (o), MySql (m) or HSQLDB (h)? o
+user: mikehj24
+password: mikehj24
+use canned Oracle connection string (y/n): y
+host: dbs3.cs.umb.edu
+port (often 1521): 1521
+sid (site id): dbs3
+Origin:Los-Angeles
+Destination:Honolulu
+using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...connected.
+Flight Number: 33
+Flight Distance: 2551
+Flight Duration: 0 2:0:0.0
+
+Flight Number: 34
+Flight Distance: 2551
+Flight Duration: 0 2:33:0.0
+
+mikehj24@pe07:~/cs630/hw4$ java -classpath ojdbc6.jar:. FindFlights
+Picked up _JAVA_OPTIONS: -Djava.security.egd=file:/dev/../dev/urandom
+Please enter information to test connection to the database
+Using Oracle (o), MySql (m) or HSQLDB (h)? o
+user: mikehj24
+password: mikehj24
+use canned Oracle connection string (y/n): y
+host: dbs3.cs.umb.edu
+port (often 1521): 1521
+sid (site id): dbs3
+Origin:Los-Angeles
+Destination:Sydney
+using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...connected.
+Flight Number: 7
+Flight Distance: 7487
+Flight Duration: 1 7:40:0.0
+
+mikehj24@pe07:~/cs630/hw4$ java -classpath ojdbc6.jar:. FindFlights
+Picked up _JAVA_OPTIONS: -Djava.security.egd=file:/dev/../dev/urandom
+Please enter information to test connection to the database
+Using Oracle (o), MySql (m) or HSQLDB (h)? o
+user: mikehj24
+password: mikehj24
+use canned Oracle connection string (y/n): y
+host: dbs3.cs.umb.edu
+port (often 1521): 1521
+sid (site id): dbs3
+Origin:Madison
+Destination:Chicago
+using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...connected.
+Flight Number: 4884
+Flight Distance: 84
+Flight Duration: 0 0:50:0.0
+

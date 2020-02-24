@@ -1,0 +1,29 @@
+mikehj24@pe07:~/cs630/hw4$java -cp ojdbc6.jar:. FindRestaurants
+Please enter information to test connection to the database
+Using Oracle (o), MySql (m) or HSQLDB (h)? o
+user: mikehj24
+password: mikehj24
+use canned Oracle connection string (y/n): y
+host: dbs3.cs.umb.edu
+port (often 1521): 1521
+sid (site id): dbs3
+using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...connected.
+Enter apartment listing: 120
+
+ Restaurants result listing within 200m radius from apartment with at least 10 reviews: 
+
+Business                                          	Rating    	   Reviews
+
+Arby's                                            	2.5       	        35
+Rachel's Kitchen                                  	3.5       	       252
+Port of Subs                                      	3.0       	        34
+El Pollo Loco                                     	2.5       	        62
+China One                                         	3.5       	       200
+Timbers - Durango                                 	2.5       	        90
+Market Grille Cafe                                	4.0       	       428
+Babystacks Cafe                                   	4.0       	       437
+LULU Hawaiian BBQ 2                               	3.5       	        56
+Popeyes Louisiana Kitchen                         	2.0       	        88
+mikehj24@pe07:~/cs630/hw4$ exit
+exit

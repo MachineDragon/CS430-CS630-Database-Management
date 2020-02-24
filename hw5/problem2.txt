@@ -1,0 +1,26 @@
+mikehj24@pe07:~/cs630/hw5$ sqlplus mikehj24/mikehj24@//dbs3.cs.umb.edu/dbs3
+
+SQL*Plus: Release 12.1.0.2.0 Production on Tue Dec 3 21:19:33 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Tue Dec 03 2019 20:55:03 -05:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+SQL> @sf_distance.sql
+
+Function created.
+
+SQL> select geo_distance(151.20208, -33.883741, 151.195986, -33.87266) from dual;
+
+GEO_DISTANCE(151.20208,-33.883741,151.195986,-33.87266)
+-------------------------------------------------------
+                                             1352.24554
+
+SQL> exit
+Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+mikehj24@pe07:~/cs630/hw5$

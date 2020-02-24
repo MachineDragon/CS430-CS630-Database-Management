@@ -1,0 +1,40 @@
+1.)  SELECT S.sname 
+FROM Suppliers S, Parts P, Catalog C 
+WHERE C.sid = S.sid AND C.pid=P.pid AND P.color = 'red'
+
+2.) SELECT C.sid
+FROM Parts P, Catalog C
+WHERE P.color = ‘green’ OR P.color = ‘red’)
+AND P.pid = C.pid
+
+3.) SELECT S.sid
+FROM Suppliers S, Parts P, Catalog C
+WHERE S.address = ‘221 Packer street’ OR S.sid =C.sid
+AND P.color=’red’ AND P.pid = C.pid )
+
+4.)SELECT C.sid
+FROM Parts P, Catalog C
+WHERE P.color = ‘red’ AND P.pid = C.pid
+AND EXISTS ( SELECT P2.pi
+FROM Parts P2, Catalog C2
+WHERE P2.color = ‘green’ AND C2.sid = C.sid
+AND P2.pid = C2.pid )
+
+
+9.) SELECT s.sid
+FROM Catalog C1, Catalog C2
+WHERE C1.pid = C2.pid AND C1.sid = C2.sid
+AND C1.cost > C2.cost
+
+10.)SELECT C.pid
+FROM Catalog C
+WHERE EXISTS (SELECT C1.sid
+FROM Catalog C1
+WHERE C1.pid != C.pid AND C1.sid != C.sid )
+
+11.)SELECT C.pid
+FROM Catalog C, Suppliers S
+WHERE S.sname = ‘Yosemite Sham’ AND C.sid = S.sid
+AND C.cost ≥ ALL (Select C2.cost
+FROM Catalog C2, Suppliers S2
+WHERE S2.sname = ‘Yosemite

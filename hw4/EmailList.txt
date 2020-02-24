@@ -1,0 +1,74 @@
+mikehj24@pe07:~/cs630/hw4$sqlplus mikehj24/mikehj24@//dbs3.cs.umb.edu/dbs3
+
+SQL*Plus: Release 12.1.0.2.0 Production on Wed Nov 20 20:53:24 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Wed Nov 20 2019 20:45:05 -05:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+SQL> @createuserdb.sql
+
+Table created.
+
+SQL> exit
+Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+mikehj24@pe07:~/cs630/hw4$java -cp ojdbc6.jar:. EmailList
+Picked up _JAVA_OPTIONS: -Djava.security.egd=file:/dev/../dev/urandom
+Please enter information for connection to the database
+Using Oracle (o) or MySql (m)? o
+Oracle username: mikehj24
+Oracle password: mikehj24
+use canned Oracle connection string (y/n): y
+host: dbs3.cs.umb.edu
+port (often 1521): 1521
+sid (site id): dbs3
+using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...connected.
+To add a member to the email list, enter name and email as follows:
+Enter firstName: Sue
+Enter lastName: Wong
+Enter email: swong@gmail.com
+New user Sue is now registered.
+
+mikehj24@pe07:~/cs630/hw4$ java -cp ojdbc6.jar:. EditUser
+Please enter information for connection to the database
+Using Oracle (o) or MySql (m)? o
+Oracle username: mikehj24
+Oracle password: mikehj24
+use canned Oracle connection string (y/n): y
+host: dbs3.cs.umb.edu
+port (often 1521): 1521
+sid (site id): dbs3
+using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...connected.
+To add a member to the email list, enter name and email as follows:
+Enter email: swong@gmail.com
+Change firstName(Sue): Susan
+Change lastName(Wong): Wong
+Name Changed to: Susan Wong
+
+mikehj24@pe07:~/cs630/hw4$ sqlplus mikehj24/mikehj24@//dbs3.cs.umb.edu/dbs3
+
+SQL*Plus: Release 12.1.0.2.0 Production on Wed Nov 20 20:56:47 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Wed Nov 20 2019 20:53:24 -05:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+SQL> @dropuserdb.sql
+
+Table dropped.
+
+SQL> exit
+

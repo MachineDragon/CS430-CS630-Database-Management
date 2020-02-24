@@ -1,0 +1,28 @@
+1.)CREATE TABLE works(eid integer NOT NULL, did integer NOT NULL, pcttime integer
+, PRIMARY KEY (eid, did) FOREIGN KEY(did) REFERENCES Dept);
+
+ delete a Dept tuple, delete all work tuples associated with it, set did field to none,
+or set the did of some to default
+
+2.) CREATE TABLE Emp (eid INTEGER, ename CHAR(10), age INTEGER, salary REAL, PRIMARY KEY (eid));
+
+CREATE TABLE Works (eid INTEGER,
+did INTEGER, pcttime INTEGER, PRIMARY KEY (eid, did), 
+FOREIGN KEY (did) REFERENCES Dept, FOREIGN KEY (eid) REFERENCES Emp,
+ ON DELETE CASCADE);
+
+CREATE TABLE Dept (did INTEGER, budget REAL, managerid INTEGER ,
+PRIMARY KEY (did), FOREIGN KEY (managerid) REFERENCES Emp, ON DELETE SET NULL)
+
+3.) CREATE TABLE Dept (did INTEGER, budget REAL,
+managerid INTEGER NOT NULL , PRIMARY KEY (did), FOREIGN KEY (managerid) REFERENCES Emp)
+
+4.)INSERT
+INTO Emp (eid, ename, age, salary)
+VALUES (101, ’John Doe’, 32, 15000)
+
+5.) UPDATE Emp E
+
+6.) DELETE
+FROM Dept D
+WHERE D.dname = ’Legal

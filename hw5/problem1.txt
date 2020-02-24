@@ -1,0 +1,73 @@
+mikehj24@pe07:~/cs630/hw5$ sqlplus mikehj24/mikehj24@//dbs3.cs.umb.edu/dbs3
+
+SQL*Plus: Release 12.1.0.2.0 Production on Tue Dec 3 21:08:07 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Tue Dec 03 2019 20:47:35 -05:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+SQL> @drop_apartmentdb.sql
+
+Table dropped.
+
+Table dropped.
+
+SQL> @create_apartmentdb.sql
+
+Table created.
+
+
+Table altered.
+
+
+Table created.
+
+
+Table altered.
+
+SQL> exit
+Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+mikehj24@pe07:~/cs630/hw5$ javac DeleteListing.java
+mikehj24@pe07:~/cs630/hw5$ java -cp ojdbc6.jar:. DeleteListing
+Please enter information to test connection to the database
+Using Oracle (o), MySql (m) or HSQLDB (h)? o
+user: mikehj24
+password: mikehj24
+use canned Oracle connection string (y/n): y
+host: dbs3.cs.umb.edu
+port (often 1521): 1521
+sid (site id): dbs3
+using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...connected.
+Enter listing number:
+230
+mikehj24@pe07:~/cs630/hw5$ sqlplus mikehj24/mikehj24@//dbs3.cs.umb.edu/dbs3
+
+SQL*Plus: Release 12.1.0.2.0 Production on Tue Dec 3 21:12:30 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Tue Dec 03 2019 20:54:35 -05:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+SQL> select count(*) from apartments;
+
+  COUNT(*)
+----------
+       214
+
+SQL> select count(*) from rented_apartments;
+
+  COUNT(*)
+----------
+         1
+
+SQL>

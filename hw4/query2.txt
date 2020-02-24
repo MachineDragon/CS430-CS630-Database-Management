@@ -1,0 +1,78 @@
+mikehj24@pe07:~/cs630/HW4$ sqlplus mikehj24/mikehj24@//dbs3.cs.umb.edu/dbs3
+
+SQL*Plus: Release 12.1.0.2.0 Production on Wed Nov 20 20:40:03 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Wed Nov 20 2019 20:31:22 -05:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+SQL> @query2.sql
+
+      FLNO   DISTANCE
+---------- ----------
+F1.ARRIVES-F1.DEPARTS
+---------------------------------------------------------------------------
+	33	 2551
++000000000 02:00:00.000000
+
+	34	 2551
++000000000 02:33:00.000000
+
+
+
+      FLNO   DISTANCE
+---------- ----------
+F1.ARRIVES-F1.DEPARTS
+---------------------------------------------------------------------------
+	 7	 7487
++000000001 07:40:00.000000
+
+
+
+      FLNO   DISTANCE
+---------- ----------
+F1.ARRIVES-F1.DEPARTS
+---------------------------------------------------------------------------
+      4884	   84
++000000000 00:50:00.000000
+
+
+SQL> exit
+
+
+SQL> @query2.sql
+
+      FLNO   DISTANCE
+---------- ----------
+F.ARRIVES-F.DEPARTS
+---------------------------------------------------------------------------
+        33       2551
++000000000 02:00:00.000000
+
+        34       2551
++000000000 02:33:00.000000
+
+
+
+      FLNO   DISTANCE
+---------- ----------
+F.ARRIVES-F.DEPARTS
+---------------------------------------------------------------------------
+         7       7487
++000000001 07:40:00.000000
+
+
+
+      FLNO   DISTANCE
+---------- ----------
+F.ARRIVES-F.DEPARTS
+---------------------------------------------------------------------------
+      4884         84
++000000000 00:50:00.000000
+
+
+SQL>

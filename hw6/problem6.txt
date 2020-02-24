@@ -1,0 +1,24 @@
+SQL> @createview.sql
+
+View created.
+
+SQL> @dropview.sql
+
+View dropped.
+
+SQL> @createview.sql
+
+View created.
+
+
+SQL> @queryview1.sql
+
+no rows selected
+
+SQL> @queryview2.sql
+
+MGRNAME
+------------------------------
+Michael Miller
+
+SQL>

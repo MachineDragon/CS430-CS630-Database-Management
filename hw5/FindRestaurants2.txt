@@ -1,0 +1,18 @@
+mikehj24@pe07:~/cs630/hw5$  javac FindRestaurants2.java
+mikehj24@pe07:~/cs630/hw5$  java -cp ojdbc6.jar:. FindRestaurants2
+Please enter information to test connection to the database
+Using Oracle (o), MySql (m) or HSQLDB (h)? o
+user: mikehj24
+password: mikehj24
+use canned Oracle connection string (y/n): y
+host: dbs3.cs.umb.edu
+port (often 1521): 1521
+sid (site id): dbs3
+using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...connected.
+Enter listing Number 25
+Enter category: Restaurants
+The report generated is :- 2
+Enter category: Grocery
+The report generated is :- 0
+mikehj24@pe07:~/cs630/hw5$ exit

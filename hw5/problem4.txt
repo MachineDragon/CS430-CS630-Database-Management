@@ -1,0 +1,31 @@
+mikehj24@pe07:~/cs630/hw5$ sqlplus mikehj24/mikehj24@//dbs3.cs.umb.edu/dbs3
+
+SQL*Plus: Release 12.1.0.2.0 Production on Tue Dec 3 22:30:51 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Tue Dec 03 2019 21:22:33 -05:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+SQL> @sf_apt_stats.sql
+
+Function created.
+
+No errors.
+
+APARTMENT_STATS(25,'RESTAURANTS')
+---------------------------------
+                                2
+
+
+APARTMENT_STATS(25,'GROCERY')
+-----------------------------
+                            0
+
+SQL> exit
+Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+mikehj24@pe07:~/cs630/hw5$

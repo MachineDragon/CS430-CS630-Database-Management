@@ -1,0 +1,33 @@
+CS630 JDBC Example: from Murach JSP book (see Lecture16 slides)
+
+createuserdb.sql: create needed userdb table
+dropuserdb.sql: drop userdb table
+
+EmailList.java: top-level program
+User.java:  Java bean for user, holds firstname, lastname, email
+UserDB.java: Database access code
+
+To build: javac *.java
+To run: java -cp ojdbc6.jar:. EmailList
+
+Example run (please use your own account!)  First use createuserdb.sql to create
+the needed table.
+
+topcat$ java -cp ojdbc6.jar:. EmailList
+Picked up _JAVA_OPTIONS: -Djava.security.egd=file:/dev/../dev/urandom
+Please enter information for connection to the database
+Using Oracle (o) or MySql (m)? o
+Oracle username: cs630test
+Oracle password: cs630test
+use canned Oracle connection string (y/n): y
+host: dbs3.cs.umb.edu
+port (often 1521): 1521
+sid (site id): dbs3
+using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...using connection string: jdbc:oracle:thin:@dbs3.cs.umb.edu:1521:dbs3
+Connecting to the database...connected.
+To add a member to the email list, enter name and email as follows:
+Enter firstName: Sue
+Enter lastName: Wong
+Enter email: swong@gmail.com
+New user Sue is now registered.

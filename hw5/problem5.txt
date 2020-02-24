@@ -1,0 +1,28 @@
+mikehj24@pe07:~/cs630/hw5$ sqlplus mikehj24/mikehj24@//dbs3.cs.umb.edu/dbs3
+
+SQL*Plus: Release 12.1.0.2.0 Production on Tue Dec 3 21:40:00 2019
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Tue Dec 03 2019 21:12:39 -05:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+
+SQL>  @sp_delete_listing.sql
+
+Procedure created.
+
+SQL> call delete_listing(230);
+
+Call completed.
+
+SQL> select * from apartments where listing=230;
+
+no rows selected
+
+SQL> exit
+Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options
+mikehj24@pe07:~/cs630/hw5$
